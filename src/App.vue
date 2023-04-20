@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HelloWorld msg='Emichiyo!' />
+    <HelloWorld msg='Hi, Emichiyo!' />
   </div>
 </template>
 
