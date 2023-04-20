@@ -3,6 +3,6 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/emichiyo.github.io/',
+  base: 'https://emichiyo.github.io/',
   plugins: [vue()],
 });
