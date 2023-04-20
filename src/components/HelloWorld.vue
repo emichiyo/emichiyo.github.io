@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <h1 class="flex-box">{{ msg }}</h1>
-  </div>
+  <h1 class="flex-box">{{ msg }}</h1>
 </template>
 
 <script lang="ts">
