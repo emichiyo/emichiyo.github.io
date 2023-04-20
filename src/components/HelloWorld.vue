@@ -1,6 +1,6 @@
 <template>
   <div class="flex-box">
-    <h1>{{ msg }}</h1>
+    <h1>Hi, Emichiyo!</h1>
     <img src="../assets/ellie.jpg" alt="The girl" width="500"/>
   </div>
 </template>
