@@ -1,5 +1,8 @@
 <template>
-  <h1 class="flex-box">{{ msg }}</h1>
+  <div class="flex-box">
+    <h1>{{ msg }}</h1>
+    <img src="../assets/ellie.jpg" alt="The girl" width="500"/>
+  </div>
 </template>
 
 <script lang="ts">
@@ -20,5 +23,6 @@ export default defineComponent({
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 </style>
