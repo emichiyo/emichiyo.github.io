@@ -1,6 +1,5 @@
 <template>
   <div class="flex-box">
-    <h1>Hi, Emichiyo!</h1>
     <img src="../assets/ellie.jpg" alt="The girl" width="400"/>
     <p>Wow! Isn't she beautiful?</p>
   </div>
