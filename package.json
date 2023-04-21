@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@fontsource/bellefair": "^4.5.10",
+    "@fontsource/yomogi": "^4.5.12",
     "@vitejs/plugin-vue": "^4.1.0",
     "jquery": "^3.6.4",
     "vue": "^3.2.47"

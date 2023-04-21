@@ -1,7 +1,9 @@
 <template>
   <div class="app">
     <NavBar/>
-    <router-view></router-view>
+    <router-view
+      class="current-page"
+    ></router-view>
   </div>
 </template>
 
@@ -18,3 +20,12 @@ export default defineComponent({
   },
 });
 </script>
+
+<style>
+.current-page {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+</style>

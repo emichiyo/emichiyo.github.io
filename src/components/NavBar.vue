@@ -2,9 +2,10 @@
     <div class="navbar">
         <div class="navbar-header-box">
             <div class="head-item">
-                <h1>Emichiyo!</h1>
+                <h1 class="header-name">Emichiyo!</h1>
             </div>
             <div class="head-item">
+                <span></span>
                 Artist and Illustrator
                 <br/>
                 based in Omaha, Nebraska
@@ -20,7 +21,10 @@
     </div>
 </template>
 
+<!-- TODO Fix routing for deployment. Non-root fails to load unless navigated from root. -->
+
 <script lang="ts">
+import "@fontsource/yomogi";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -31,9 +35,9 @@ export default defineComponent({
             tab_names: [
                 { name: 'Home', route: '/'},
                 { name: 'About', route: '/about'},
-                // { name: 'Gallery', route: '/gallery'},
-                // { name: 'Commission', route: '/commission'},
-                // { name: 'Contact', route: '/contact'}
+                { name: 'Gallery', route: '/gallery'},
+                { name: 'Commission', route: '/commission'},
+                { name: 'Contact', route: '/contact'}
             ] 
         };
     },
@@ -44,12 +48,20 @@ export default defineComponent({
 a:visited {
     color: #000000;
 }
+
+.header-name {
+    font-family: "Yomogi";
+}
 .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: #FFCAD4;
+
+    /* padding-left: 100px;
+    padding-right: 100px; */
+
     margin: 10;
     width: 100%;
     /* height: 10rem; */
@@ -77,6 +89,10 @@ a:visited {
 }
 
 .head-item {
+    margin: 2rem;
+}
+
+.head-info-item {
     margin: 2rem;
 }
 </style>
