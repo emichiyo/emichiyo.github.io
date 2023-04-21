@@ -25,5 +25,12 @@ export default defineConfig({
   ],
   resolve: {
     '@': resolve(__dirname, './src'),
-  }
+  },
+  build: {
+    rollupOptions: {
+        output: {
+            inlineDynamicImports: true
+        }
+    }
+  },
 });
