@@ -1,13 +1,14 @@
-import { createApp } from 'vue'
 import "@fontsource/bellefair";
 import "@fontsource/yomogi";
 
 import './style.css'
 import App from './App.vue'
-import router from './router/index';
+// import router from './router/index';
+import routes from '~pages';
 
-const app = createApp(App);
+import { ViteSSG } from 'vite-ssg';
 
-app.use(router);
-
-app.mount('#app');
+export const createApp = ViteSSG(
+    App,
+    { routes },
+);

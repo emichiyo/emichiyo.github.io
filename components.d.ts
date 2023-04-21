@@ -9,11 +9,6 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    About: typeof import('./src/components/About.vue')['default']
-    Commission: typeof import('./src/components/Commission.vue')['default']
-    Contact: typeof import('./src/components/Contact.vue')['default']
-    Gallery: typeof import('./src/components/Gallery.vue')['default']
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     NavBar: typeof import('./src/components/NavBar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

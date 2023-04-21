@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "build": "vite-ssg build",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
@@ -22,6 +22,7 @@
     "@types/jquery": "^3.5.16",
     "@types/node": "^18.15.13",
     "@types/vue-router": "^2.0.0",
+    "@vueuse/head": "^1.1.26",
     "gh-pages": "^5.0.0",
     "typescript": "^4.9.3",
     "unplugin-auto-import": "^0.15.3",
@@ -29,6 +30,7 @@
     "unplugin-vue-router": "^0.5.5",
     "vite": "^4.2.0",
     "vite-plugin-pages": "^0.29.0",
+    "vite-ssg": "^0.22.2",
     "vue-router": "^4.1.6",
     "vue-tsc": "^1.2.0"
   }
