@@ -27,9 +27,9 @@ export default defineConfig({
       deep: false
     }),
   ],
-  resolve: {
-    '@': resolve(__dirname, './src'),
-  },
+  // resolve: {
+  //   '@': resolve(__dirname, './src'),
+  // },
   build: {
     rollupOptions: {
         output: {
