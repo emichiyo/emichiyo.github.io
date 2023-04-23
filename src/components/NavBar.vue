@@ -1,33 +1,44 @@
 <template>
-    <div class="navbar">
-        <div class="navbar-header-box">
-            <div class="head-item">
+    <FlexBox column class="navbar">
+        <FlexBox row>
+            <FlexItem class="head-item">
                 <h1 class="header-name">Emichiyo!</h1>
-            </div>
-            <div class="head-item">
-                <span></span>
-                Artist and Illustrator
-                <br/>
-                based in Omaha, Nebraska
-                <br/>
-                <a href="https://instagram.com/emi.chiyo_?igshid=YmMyMTA2M2Y=">@emi.chiyo_</a>
-            </div>
-        </div>
-        <div class="navbar-tab-box">
+            </FlexItem> 
+            <FlexItem class="head-item">
+                <FlexBox column left>
+                    <FlexItem>
+                        Artist and Illustrator
+                    </FlexItem>
+                    <FlexItem>
+                        based in Omaha, Nebraska
+                    </FlexItem>
+                    <FlexItem>
+                        <a href="https://instagram.com/emi.chiyo_?igshid=YmMyMTA2M2Y=">@emi.chiyo_</a>
+                    </FlexItem>
+                </FlexBox>
+            </FlexItem>
+        </FlexBox>
+
+        <FlexBox row>
             <div v-for="(tab, index) of tab_names" :key="index" class="tab-item">
                 <router-link :to="tab.route">{{ tab.name }}</router-link>
             </div>
-        </div>        
-    </div>
+        </FlexBox>
+    </FlexBox>
 </template>
-
-<!-- TODO Fix routing for deployment. Non-root fails to load unless navigated from root. -->
 
 <script lang="ts">
 import "@fontsource/yomogi";
 import { defineComponent } from "vue";
+import FlexBox from "./FlexBox.vue";
+import FlexItem from "./FlexItem.vue";
 
 export default defineComponent({
+    name: 'NavBar',
+    components: {
+        FlexBox,
+        FlexItem,
+    },
     data() {
         return {
             component_width: 3000,
@@ -53,46 +64,28 @@ a:visited {
     font-family: "Yomogi";
 }
 .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #FFCAD4;
-
+    position: sticky;
+    position: -webkit-sticky; /* safari */
+    top: -168.5px;
+    bottom: 100%;
+    /* z-index: 100; */
+    background-color: #ffe6ee;
     /* padding-left: 100px;
     padding-right: 100px; */
-
-    margin: 10;
+    /* margin: 10; */
     width: 100%;
     /* height: 10rem; */
     margin-bottom: 10px;
-
-    box-shadow: 0.1px 0.1px 2px 0.3px black;
+    box-shadow: 0.01px 0.1px 15px 0.3px rgb(202, 202, 202);
 }
 
-.navbar-header-box {
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}
 
-.navbar-tab-box {
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}
 
 .tab-item {
     margin: 1rem;
 }
 
 .head-item {
-    margin: 2rem;
-}
-
-.head-info-item {
     margin: 2rem;
 }
 </style>
