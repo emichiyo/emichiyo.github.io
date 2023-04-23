@@ -24,9 +24,9 @@ export default defineComponent({
 
 <style>
 .current-page {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-left: 6rem;
-  padding-right: 6rem;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  padding-left: 6vw;
+  padding-right: 6vw;
 }
 </style>

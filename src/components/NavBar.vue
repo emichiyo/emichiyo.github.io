@@ -66,26 +66,31 @@ a:visited {
 .navbar {
     position: sticky;
     position: -webkit-sticky; /* safari */
-    top: -168.5px;
+    top: -15vh;
     bottom: 100%;
     /* z-index: 100; */
     background-color: #ffe6ee;
     /* padding-left: 100px;
     padding-right: 100px; */
-    /* margin: 10; */
+    /* padding-top: 10vh; */
+    /* padding-bottom: 10vh; */
+    padding-top: 3vh;
+    /* padding-bottom: 1vh; */
     width: 100%;
-    /* height: 10rem; */
-    margin-bottom: 10px;
+    height: 20vh;
+    /* margin-bottom: 10px; */
     box-shadow: 0.01px 0.1px 15px 0.3px rgb(202, 202, 202);
 }
 
 
 
 .tab-item {
-    margin: 1rem;
+    display: sticky;
+    top: 4vh;
+    margin: 3vh;
 }
 
 .head-item {
-    margin: 2rem;
+    margin: 2vh;
 }
 </style>

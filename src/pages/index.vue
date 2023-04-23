@@ -9,6 +9,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import FlexBox from "../components/FlexBox.vue";
+import jQuery from "jquery";
 
 export default defineComponent({
   name: 'Hello World',
@@ -20,15 +21,19 @@ export default defineComponent({
   },
   computed: {
     imageCSS() {
-      const is_mobile = (window.innerWidth < 850);
+      // const height = $(window).innerHeight();
+      // const is_mobile = (height < 850);
 
-      const margins = (is_mobile)
-        ? '-10%'
-        : '0px'; 
+      // const margins = (is_mobile)
+      //   ? '-10%'
+      //   : '0px'; 
+
+      // const h = jQuery('#app').innerHeight() as number;
 
       return { 
         width: '100%',
-        height: `${window.innerHeight - 232 - 80}px`,
+        // height: `${h - 232 - 80}px`,
+        height: `${70}vh`
         // margin-left: margins,
         // margin-right: margins,
       };
